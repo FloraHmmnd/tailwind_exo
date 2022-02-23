@@ -14,7 +14,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        body: 'Roboto, sans-serif'
+        body: 'Roboto',
+        second : ['Montserrat', 'sans-serif']
       }
     },
   },
