@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .card{
     @apply bg-white rounded-xl overflow-hidden shadow-md relative hover:shadow-lg
 }

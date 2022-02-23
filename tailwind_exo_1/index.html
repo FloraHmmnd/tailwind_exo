@@ -6,38 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="css/tailwind.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body class="text-lime-700 font-second">
+<body class="text-lime-700 font-body">
 
     <div class="grid md:grid-cols-3" >
       <div class="md:col-span-1 md:flex md:justify-end">
         <nav class="text-right">
-          <div>
+          <div class="flex justify-between items-center">
             <h1 class="font-bold uppercase p-4 border-b border-lime-100">
               <a class="hover:text-lime-900" href="/">Food Madiana</a>
             </h1>
+            <div class="px-4 cursor-pointer md:hidden" id="burger">
+              <svg class='w-6' fill="#365314" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"/></svg>
+            </div>
           </div>
-          <ul class="text-sm mt-6">
+          <ul class="text-sm mt-6 hidden md:block" id="menu">
             <li class="text-lime-900 font-bold py-1 border-r-4 border-primary">
-              <a href="#" class="px-4 flex justify-end" >
+              <a href="#" class="px-4 flex justify-end items-center " >
                 <span>Home</span>
                 <svg class="w-5 ml-2" fill="#365314" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 11 21 L 11 15 L 13 15 L 13 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z M 12 4.7910156 L 18 10.191406 L 18 11 L 18 19 L 15 19 L 15 13 L 9 13 L 9 19 L 6 19 L 6 10.191406 L 12 4.7910156 z"/></svg>
               </a>
             </li>
             <li class="py-1">
-              <a href="#" class="px-4 flex justify-end border-r-4 border-white">
+              <a href="#" class="px-4 flex justify-end border-r-4 border-white items-center">
                 <span>About</span>
                 <svg class="w-5 ml-2" fill="#4D7C0F" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 4.0097656 3 C 2.9179106 3 2.0097656 3.9049841 2.0097656 4.9980469 L 2 23 L 6 19 L 20 19 C 21.093063 19 22 18.093063 22 17 L 22 5 C 22 3.9069372 21.093063 3 20 3 L 4.0097656 3 z M 4.0097656 5 L 20 5 L 20 17 L 5.171875 17 L 4.0039062 18.167969 L 4.0097656 5 z M 11 7 L 11 9 L 13 9 L 13 7 L 11 7 z M 11 11 L 11 15 L 13 15 L 13 11 L 11 11 z"/></svg>
               </a>
             </li>
             <li class="py-1">
-              <a href="#" class="px-4 flex justify-end border-r-4 border-white">
+              <a href="#" class="px-4 flex justify-end border-r-4 border-white items-center">
                 <span>Contact</span>
                 <svg class="w-5 ml-2" fill="#4D7C0F" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="24px" height="24px"><path d="M 14 4 C 8.4886661 4 4 8.4886661 4 14 L 4 36 C 4 41.511334 8.4886661 46 14 46 L 36 46 C 41.511334 46 46 41.511334 46 36 L 46 14 C 46 8.4886661 41.511334 4 36 4 L 14 4 z M 14 6 L 36 6 C 40.430666 6 44 9.5693339 44 14 L 44 36 C 44 40.430666 40.430666 44 36 44 L 14 44 C 9.5693339 44 6 40.430666 6 36 L 6 14 C 6 9.5693339 9.5693339 6 14 6 z M 13 15 C 11.35503 15 10 16.35503 10 18 L 10 32 C 10 33.64497 11.35503 35 13 35 L 37 35 C 38.64497 35 40 33.64497 40 32 L 40 18 C 40 16.35503 38.64497 15 37 15 L 13 15 z M 13.414062 17 L 36.583984 17 L 27.677734 25.892578 C 26.18494 27.382984 23.796834 27.382819 22.304688 25.890625 L 13.414062 17 z M 38 18.412109 L 38 31.587891 L 31.402344 25 L 38 18.412109 z M 12 18.414062 L 18.585938 25 L 12 31.585938 L 12 18.414062 z M 29.988281 26.412109 L 36.585938 33 L 13.414062 33 L 20 26.414062 L 20.890625 27.304688 C 23.146478 29.56054 26.832638 29.562194 29.089844 27.308594 L 29.988281 26.412109 z"/></svg>
               </a>
@@ -48,13 +49,13 @@
     
       <main class="px-16 py-6 bg-gray-100 md:col-span-2">
         <div class="text-primary flex justify-center md:justify-end ">
-          <a href="#" class="btn  border-primary lg:border-2 hover:bg-primary hover:text-white">Log in</a>
-          <a href="#" class="btn ml-2 border-primary lg:border-2 hover:bg-primary hover:text-white">Sign up</a>
+          <a href="#" class="btn  border-primary lg:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Log in</a>
+          <a href="#" class="btn ml-2 border-primary lg:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Sign up</a>
         </div>
 
   
         <header>
-          <h2 class="text-lime-900 text-2xl md:text-6xl font-semibold">Recipes</h2>
+          <h2 class="text-lime-900 text-2xl md:text-6xl font-black">Recipes</h2>
           <h3 class="text-lg md:text-2xl font-semibold">From the Antilles</h3>
         </header>
   
@@ -109,10 +110,12 @@
         </div>
   
         <div class="flex justify-center">
-          <div class="btn bg-secondary-100 text-secondary-200 hover:shadow-inner">Load more</div>
+          <div class="btn bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-150 hover:bg-opacity-50 transition ease-out duration-300">Load more</div>
         </div>    
       </main>
     </div>
+
+    <script src="index.js"></script>
   
   </body>
 </html>
